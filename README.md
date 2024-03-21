@@ -23,6 +23,8 @@ The prompt template I used:
 
 ### Task 2. Analysis and Problem Solving
 
+For comparing the model performance, we have used T5 model (fastchat-t5-3b-v1.0) and GPT2 model (gpt2-finetuned-cnn-summarization-v1) from Huggingface.
+
 ### T5 Model:
 
 The T5 Fast model, a large model of approximately 6.5GB, demonstrates excellent performance due to its extensive training data, providing highly accurate answers to most questions. However, it occasionally lacks in returning related documents, likely because its vast knowledge surpasses the database's scope. 
