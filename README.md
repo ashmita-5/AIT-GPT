@@ -27,14 +27,16 @@ For comparing the model performance, we have used T5 model (fastchat-t5-3b-v1.0)
 
 ### T5 Model:
 
-The T5 Fast model, a large model of approximately 6.5GB, demonstrates excellent performance due to its extensive training data, providing highly accurate answers to most questions. However, it occasionally lacks in returning related documents, likely because its vast knowledge surpasses the database's scope. 
+The T5 Fast model demonstrates excellent performance due to its extensive training data, providing highly accurate answers to most questions. However, it occasionally lacks in returning related documents, likely because its vast knowledge surpasses the database's scope. 
 
 ### GPT2 Model:
 
-On the other hand, the GPT2 Finetuned model, smaller at around 500MB, shows reduced performance compared to T5. This model, based on a decoder architecture, often retrieves answers from the limited database, impacting its overall performance. 
+On the other hand, the GPT2 Finetuned model shows reduced performance compared to T5. This model, based on an encoder and a decoder architecture, often retrieves answers from the limited database, impacting its overall performance. 
 
 Despite limitations in database size and computational resources, the GPT2 model was selected for its faster inference capabilities, suitable for a web application. 
 
 ### Issues
 
-Regarding unrelated information issues, the T5 model generally offers related information, while the GPT model tends to provide answers that match parts of the question without conveying the question's semantic meaning. To address this, enhancing the database's size and quality, along with refining prompt templates to align better with the model's training data, could improve the GPT model's performance in delivering relevant responses.
+Regarding unrelated information issues,  T5 models are good at giving relevant info, but GPT models sometimes miss the point. We can fix this by adding more and better data to the system. Also, we can tweak how we ask questions to match what the model learned during training. These changes can help GPT models give more useful responses.
+
+### Task 3. Chatbot Development - Web Application Development
