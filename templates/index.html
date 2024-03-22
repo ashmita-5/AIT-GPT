@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Demo</title>
+    <style>
+        #chat-container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #messages-container {
+            margin-bottom: 10px;
+            overflow-y: scroll;
+            max-height: 200px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="messages-container">
+            <p>Welcome to AITBot, your virtual assistant for all things related to the Asian Institute of Technology (AIT).
+                Whether you're a student, faculty member, or simply curious about AIT, I'm here to provide you with information and assistance.
+                Feel free to ask me anything about AIT, including its programs, research areas, campus facilities, and more.
+                I'll do my best to provide you with accurate and helpful answers to your inquiries.
+                So go ahead, ask me anything you'd like to know about AIT, and let's explore together!</p>
+            {% if chat_history %}
+                {% for message in chat_history %}
+                    <p><strong>{{ message.sender }}:</strong> {{ message.content }}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <form action="/" method="POST">
+            <input type="text" name="user_question" placeholder="Type your question...">
+            <button type="submit">Send</button>
+        </form>
+        {% if answer %}
+            <p><strong>Bot:</strong> {{ answer }}</p>
+        {% endif %}
+        {% if source_documents %}
+            <p><strong>Source Documents:</strong></p>
+            <ul>
+                {% for document in source_documents %}
+                    <li><a href="{{ document }}" target="_blank">{{ document }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
