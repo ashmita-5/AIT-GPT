@@ -40,3 +40,6 @@ Despite limitations in database size and computational resources, the GPT2 model
 Regarding unrelated information issues,  T5 models are good at giving relevant info, but GPT models sometimes miss the point. We can fix this by adding more and better data to the system. Also, we can tweak how we ask questions to match what the model learned during training. These changes can help GPT models give more useful responses.
 
 ### Task 3. Chatbot Development - Web Application Development
+
+<img width="522" alt="Screenshot 2024-03-22 at 08 55 59" src="https://github.com/ashmita-5/Assignment-7----AIT-GPT/assets/32629216/fa06129e-541e-4c2e-8ee0-f4f92e4698bc">
+
