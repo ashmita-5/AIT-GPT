@@ -1,4 +1,4 @@
-# NLP Assignment-7----AIT-GPT
+# AIT-GPT
 
 ## Student Info
 
