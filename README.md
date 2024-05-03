@@ -1,9 +1,5 @@
 # AIT-GPT
 
-## Student Info
-
-Ashmita Phuyal(124454)
-
 ### Task 1: Source Discovery <br>
 
 ### Source: 
